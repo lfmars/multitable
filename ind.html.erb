@@ -1,0 +1,27 @@
+<html>
+  <head>
+    <title>Multi</title>
+
+    <style>
+    td{
+      border: 1px solid red;
+    }
+    </style>
+
+  </head>
+
+  <body>
+    <table style="float: left">
+      <tr>
+        <th>Multinam</th>
+      </tr>
+      <% Fulltable.new().fulltable.each do |line| %>
+      <% line.each do |number| %>
+        <tr>
+          <td>
+            <%= number %>
+          </td>
+        </tr>
+        <% end %>
+        <% end %>
+      </table>

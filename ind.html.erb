@@ -11,17 +11,18 @@
   </head>
 
   <body>
-    <table style="float: left">
-      <tr>
-        <th>Multinam</th>
-      </tr>
+
       <% Fulltable.new().fulltable.each do |line| %>
+      <table style="float: left">
+        <tr>
+          <th>Multinam</th>
+        </tr>
       <% line.each do |number| %>
         <tr>
           <td>
-            <%= number %>
+            <%= line[0] %> * <%= number / line[0] %> = <%= number %>
           </td>
         </tr>
         <% end %>
+          </table>
         <% end %>
-      </table>
